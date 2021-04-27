@@ -1,12 +1,11 @@
 module.exports = {
-    base: '/flight-UI/',
-    title: 'fliUI',
+    base: '/wheel-vue/',
+    title: 'wheel-vue',
     description: '一个好用的UI框架',
     themeConfig: {
         nav: [
             {text: '主页', link: '/'},
-            {text: '文档', link: 'https://github.com/yinlong22/flight-UI'},
-            {text: '交流', link: 'https://juejin.im/post/5ec7888c6fb9a04797066f01'},
+            {text: '文档', link: 'https://github.com/ECHO-WQ/wheel-vue'},
         ],
         sidebar: [
             {
@@ -18,6 +17,8 @@ module.exports = {
             },
             {
                 title: '组件',
+                collapsable: false,
+                sidebarDepth: 2,
                 children: [
                     '/components/button',
                     '/components/tabs',

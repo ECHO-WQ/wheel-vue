@@ -1,21 +1,42 @@
 {
-  "name": "vuepress-starter",
+  "name": "wheel-vue",
   "version": "1.0.0",
-  "description": "",
+  "description": "这是一个UI框架",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html --no-cache",
+    "dev-test": "parcel watch test/* --no-cache & karma start",
+    "test": "parcel build test/* --no-cache --no-minify && karma start --single-run",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "deploy": "bash deploy.sh"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
+  "dependencies": {
+    "sass-loader": "^8.0.2",
+    "vue-hot-reload-api": "^2.3.4"
+  },
   "devDependencies": {
+    "@vue/component-compiler-utils": "^3.2.0",
     "@vuepress/theme-default": "^1.8.2",
+    "chai": "^4.3.4",
+    "chai-spies": "^1.0.0",
+    "karma": "^5.0.0",
+    "karma-chai": "^0.1.0",
+    "karma-chai-spies": "^0.1.4",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-mocha": "^2.0.1",
+    "karma-sinon-chai": "^2.0.2",
+    "mocha": "^7.1.0",
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.26.0",
+    "sinon": "^9.0.0",
+    "sinon-chai": "^3.6.0",
+    "vue-template-compiler": "^2.6.12",
     "vuepress": "^1.8.2"
   },
-  "dependencies": {
-    "sass": "^1.26.0",
-    "sass-loader": "^8.0.2"
+  "alias": {
+    "vue": "./node_modules/vue/dist/vue.common.js"
   }
 }

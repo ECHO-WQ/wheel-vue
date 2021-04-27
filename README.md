@@ -1,8 +1,12 @@
----
-title: 快速上手
----
+# fli-ui 一个简易的 Vue UI 组件
+## 介绍
+一套基于Vue开发的组件库，无依赖、体积小、简单易用
 
-# 快速上手
+## 特点
+
+- 使用ES6最新语法编写，基于Vue框架实现的代码，适合新手阅读
+- 源码非常精简，可以自由拓展组件功能
+- 基于Webpack和Babel的最新版本构建,兼容多种引入方式
 
 ## 开始使用
 
@@ -14,7 +18,8 @@ title: 快速上手
 
 2.引用
 
-- app.js全局引入(推荐)
+- app.js全局引入(不推荐)
+
 ```
 import {Button,ButtonGroup,Row,Col,Header,Footer,Content,Sider,Layout,Icon,Input,Toast,plugin,Tabs,TabsHead,TabsBody,TabsItem,Collapse,CollapseItem,Popover} from 'wheel-vue'
 import 'wheel-vue/dist/index.css'
@@ -43,9 +48,10 @@ Vue.component('f-collapse-item', CollapseItem)
 ```
 - 模块化引用
 
-在使用的组件里引用,下面以 Button 为例
+在使用的组件里使用
+
 ```
-import {Button} from 'wheel-vue'
+import Button from 'wheel-vue'
     export default {
         components: {
             'f-button': Button,
@@ -76,3 +82,21 @@ import {Button} from 'wheel-vue'
 ## 打包
 
     npm run build
+
+## 文档
+本项目文档使用vuepress进行构建，在docs目录下有各个组件的说明及示例 如果你想添加自己组件的文档，在编辑完成对应的文件后需要重新打包项目，最后将生成的文件重新部署
+
+具体使用方法可以参考[官方文档](https://vuepress.vuejs.org/zh/)
+
+## 说明
+本项目的开发目的，主要是个人对于技术的学习、研究、总结。其次能完成好用的ui组件使用，希望对你有帮助
+
+## 参考
+
+本组件库参考了一些比较成熟的UI框架，包括但不限于外观、API设计、甚至源码实现，特此感谢这些开源社区的贡献者
+
+- [Element](https://element.eleme.cn/#/zh-CN)
+- [iView](https://www.iviewui.com/)
+- [wheels](https://github.com/FrankFang/wheels)
+- [bootstrap](https://www.bootcss.com/)
+
